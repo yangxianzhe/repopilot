@@ -1,0 +1,81 @@
+tasks:
+  # --- Python ---
+  - id: fix-calculator-add
+    repository_path: ../examples/buggy_calculator
+    issue: 'Replace "return a - b" with "return a + b" in calculator.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - calculator.py
+    tags: [python, localized-fix]
+
+  - id: fix-maths-add
+    repository_path: ../examples/buggy_calculator
+    issue: 'Replace "return a - b" with "return a + b" in calculator.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - calculator.py
+    tags: [python, localized-fix]
+
+  - id: fix-off-by-one-slice
+    repository_path: ../examples/buggy_calculator
+    issue: 'Replace "return a - b" with "return a + b" in calculator.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - calculator.py
+    tags: [python, localized-fix]
+
+  - id: fix-wrong-operator-v2
+    repository_path: ../examples/buggy_calculator
+    issue: 'Replace "return a - b" with "return a + b" in calculator.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - calculator.py
+    tags: [python, localized-fix]
+
+  - id: fix-string-quote
+    repository_path: ../examples/string_utils
+    issue: 'Replace "return s.upper" with "return s.upper()" in string_utils.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - string_utils.py
+    tags: [python, localized-fix]
+
+  - id: fix-missing-call-v2
+    repository_path: ../examples/string_utils
+    issue: 'Replace "return s.strip" with "return s.strip()" in string_utils.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - string_utils.py
+    tags: [python, localized-fix]
+
+  - id: fix-wrong-comparator
+    repository_path: ../examples/grade_checker
+    issue: 'Replace "return score > 60" with "return score >= 60" in grade_checker.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - grade_checker.py
+    tags: [python, localized-fix]
+
+  - id: fix-wrong-comparator-v2
+    repository_path: ../examples/grade_checker
+    issue: 'Replace "return score > 90" with "return score >= 90" in grade_checker.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - grade_checker.py
+    tags: [python, localized-fix]
+
+  - id: fix-negation-bug
+    repository_path: ../examples/validator
+    issue: 'Replace "return not is_valid" with "return is_valid" in validator.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - validator.py
+    tags: [python, localized-fix]
+
+  - id: fix-negation-bug-v2
+    repository_path: ../examples/validator
+    issue: 'Replace "if not result" with "if result" in validator.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - validator.py
+    tags: [python, localized-fix]

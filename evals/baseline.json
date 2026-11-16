@@ -1,0 +1,18 @@
+{
+  "benchmark": "offline-smoke-v1",
+  "environment": "Windows, Python 3.12, local sandbox",
+  "task_count": 1,
+  "successful": 1,
+  "success_rate": 1.0,
+  "average_elapsed_ms": 2417.792,
+  "average_tool_calls": 6,
+  "results": [
+    {
+      "task_id": "fix-calculator-add",
+      "status": "succeeded",
+      "tests_run": 1,
+      "changed_files": ["calculator.py"]
+    }
+  ],
+  "note": "Smoke baseline only; expand the YAML suite before using results for model comparison."
+}

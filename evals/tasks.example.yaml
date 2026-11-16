@@ -1,0 +1,11 @@
+tasks:
+  - id: fix-calculator-add
+    repository_path: ../examples/buggy_calculator
+    issue: 'Replace "return a - b" with "return a + b" in calculator.py'
+    test_command: python -m pytest -q
+    expected_files:
+      - calculator.py
+    tags:
+      - python
+      - localized-fix
+
