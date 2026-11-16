@@ -1,0 +1,20 @@
+services:
+  repopilot:
+    build: .
+    image: repopilot:latest
+    ports:
+      - "8000:8000"
+    environment:
+      REPOPILOT_ALLOWED_ROOTS: /repos
+      REPOPILOT_DATABASE_PATH: /data/repopilot.db
+      REPOPILOT_PROVIDER: ${REPOPILOT_PROVIDER:-offline}
+      REPOPILOT_API_BASE: ${REPOPILOT_API_BASE:-https://api.openai.com/v1}
+      REPOPILOT_API_KEY: ${REPOPILOT_API_KEY:-}
+      REPOPILOT_MODEL: ${REPOPILOT_MODEL:-}
+      REPOPILOT_SANDBOX_MODE: local
+    volumes:
+      - ${REPOPILOT_REPOSITORIES:-./examples}:/repos
+      - repopilot-data:/data
+
+volumes:
+  repopilot-data:
